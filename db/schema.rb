@@ -10,13 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_18_045236) do
+ActiveRecord::Schema.define(version: 2021_06_18_073733) do
 
   create_table "companies", force: :cascade do |t|
     t.integer "company_id"
     t.string "name"
     t.text "url"
     t.string "ipo_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "stock_code"
+    t.float "growth_rate"
+  end
+
+  create_table "releases", force: :cascade do |t|
+    t.integer "company_id"
+    t.integer "release_id"
+    t.text "title"
+    t.text "main_image"
+    t.datetime "release_created_at"
+    t.integer "image_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

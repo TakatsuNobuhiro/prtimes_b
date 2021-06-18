@@ -4,5 +4,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    company_id = params[:company_id]
+    # @company = Company.all.where(:company_id = company_id)
   end
 end
