@@ -10,10 +10,10 @@
         <div class="mb-3">
           <label for="disabledSelect" class="form-label">カテゴリ</label>
           <select id="disabledSelect" class="form-select">
-            <option value="01">1</option>
-            <option value="02">2</option>
-            <option value="03">3</option>
-            <option value="04">4</option>
+            <option value="01">IT</option>
+            <option value="02">商社</option>
+            <option value="03">飲食</option>
+            <option value="04">旅行</option>
 
 
 
@@ -33,12 +33,14 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <a href="result" class="card">
-        <img src="https://prtimes.jp/i/30680/107/origin/d30680-107-210258-0.png" class="card-img-top" alt="...">
+        <img src=<%r.main_image%> class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">健康経営”を最小限の投資で。完全リモート制ウェルネスクラブ『BRST』を福利厚生サービスPerkにて提供開始</h5>
+          <h5 class="card-title"><%r.title%></h5>
         </div>
       </a>
     </div>
   </div>
+  
 <% end %>
+<%= paginate(@releases) %>
 </div>
